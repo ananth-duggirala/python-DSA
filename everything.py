@@ -145,3 +145,63 @@ def dpMakeChange(coinValueList, change, minCoins):
 				coinCount = minCoins[cents-j] + 1
 		minCoins[cents] = coinCount
 	return minCoins[change]
+
+
+# Trees
+# List of lists representation
+myTree = ['a',['b', ['d',[],[]], ['e',[],[]]], ['c', ['f',[],[]], []] ]
+
+def BinaryTree(r):
+	return [r, [], []]
+
+def insertLeft(root, newBranch):
+	t = root.pop(1)
+	if len(t) > 1:
+		root.insert(1,[newBranch,t,[]])
+	else:
+		root.insert(1,[newBranch,[],[]])
+	return root
+
+def insertRight(root, newBranch):
+	t = root.pop(2)
+	if len(t) > 1:
+		root.insert(2, [newBranch,[],t])
+	else:
+		root.insert(2,[newBranch,[],[]])
+	return root
+
+# Nodes and references representation
+class BinaryTree(self, rootObj)
+	def __init__(self,rootObj):
+		self.key = rootObj
+		self.leftChild = None
+		self.rightChild = None
+
+	def insertLeft(self, newNode):
+		if self.leftChild == None:
+			self.leftChild = BinaryTree(newNode)
+		else:
+			t = BinaryTree(newNode)
+			t.leftChild = self.leftChild
+			self.leftChild = t
+	def insertRight(self, newNode):
+		if self.rightChild == None:
+			self.rightChild = BinaryTree(newNode)
+		else:
+			t = BinaryTree(newNode)
+			t.rightChild = self.rightChild
+			self.rightChild = t
+
+# Also define getLeftChild, getRightChild, setRootVal, getRootVal in the normal manner
+
+# Preorder, inorder, and postorder
+def preorder(tree):
+	if tree:
+		print(tree.getRootVal())
+		preorder(tree.getLeftChild())
+		preorder(tree.getRightChild())
+
+# Binary Heap
+# BinaryHeap(), insert(k), findMin(), delMin(), isEmpty(), size(), buildHeap(list)
+
+# TODO how to use the heapq module
