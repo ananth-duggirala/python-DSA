@@ -204,4 +204,25 @@ def preorder(tree):
 # Binary Heap
 # BinaryHeap(), insert(k), findMin(), delMin(), isEmpty(), size(), buildHeap(list)
 
-# TODO how to use the heapq module
+# heapq module: 
+# heappush(heap, item), heappop(heap), heappushpop(heap,item), 
+# heapify(x), heapreplace(heap,item), merge(*iterables, key=None, reverse=False)
+# nlargest(n, iterable, key=None), nsmallest(n, iterable, key=None)
+
+
+# TODO: Binary search tree in more detail
+
+class BinarySearchTree:
+	def __init__(self):
+		self.root = None
+		self.size = 0
+
+	def length(self):
+		return self.size
+
+	def __len__(self):
+		return self.size
+
+	def __iter__(self):
+		return self.root.__iter__()
+
