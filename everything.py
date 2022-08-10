@@ -171,7 +171,7 @@ def insertRight(root, newBranch):
 	return root
 
 # Nodes and references representation
-class BinaryTree(self, rootObj)
+class BinaryTree:
 	def __init__(self,rootObj):
 		self.key = rootObj
 		self.leftChild = None
@@ -226,3 +226,26 @@ class BinarySearchTree:
 	def __iter__(self):
 		return self.root.__iter__()
 
+# Graphs:
+# Adjacency matrix representation
+class Graph:
+	def __init__(self, vertices):
+		self.V = vertices
+		self.graph = [[0 for row in range(vertices)] for column in range(vertices)]
+
+	def printGraph(self):
+		for i in range(self.V):
+			for j in range(self.V):
+				print(self.graph[i][j], end=" ")
+			print('\n')
+
+	def addEdge(self,v,w):
+		self.graph[v][w] = 1
+		self.graph[w][v] = 1
+
+class GraphAdjList:
+	def __init__(self, vertices, edges):
+		self.V = vertices
+		self.adjList = [[] for i in range(vertices)]
+		for (u,v) in edges:
+			self.adjList[u].append(v)
